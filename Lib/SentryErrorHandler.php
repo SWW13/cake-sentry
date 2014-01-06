@@ -22,7 +22,7 @@ class SentryErrorHandler extends ErrorHandler {
     public static function handleException(Exception $exception) {
         try {
             // avoid bot scan errors
-            if (!($exception instanceof MissingControllerException || $exception instanceof MissingPluginException) && Configure::read('debug') > 0)
+            if (!($exception instanceof MissingControllerException || $exception instanceof MissingPluginException) || Configure::read('debug') > 0)
                 self::sentryLog($exception);
 
             return parent::handleException($exception);
