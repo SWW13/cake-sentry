@@ -8,7 +8,7 @@ Installation
 
 1. Install Sentry Plugin into your CakePHP project :
 <pre>
-	git submodule add http://github.com/bbelyeu/cake-sentry app/Plugin/Sentry
+	git submodule add http://github.com/SWW13/cake-sentry app/Plugin/Sentry
 	cd app/Plugin/Sentry
 	git submodule init
 	git submodule update
